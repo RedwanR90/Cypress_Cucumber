@@ -1,0 +1,35 @@
+{
+  "name": "cypressassignment",
+  "version": "1.0.0",
+  "description": "To create a simple framework and automate assignment scenarios",
+  "main": "index.js",
+  "scripts": {
+    "launchcypress": "cypress open",
+    "testcases": "cypress run --spec ./cypress/integration/*.feature --browser chrome --headed",
+    "finaltest": "npm run testcases && node cucumber-html-report.js || node cucumber-html-report.js"
+  },
+  "author": "Redwanur Rahman",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.1.0",
+    "allure-commandline": "^2.17.2",
+    "allure-js-commons": "^2.0.0-beta.16",
+    "cypress": "^9.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^1.6.2",
+    "html-webpack-plugin": "^5.5.0",
+    "multiple-cucumber-html-reporter": "^1.20.0"
+  },
+  "dependencies": {
+    "cypress-downloadfile": "^1.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
